@@ -1,9 +1,12 @@
 import React from 'react';
+import DataTable from '../../components/dataTable/DataTable';
+import "./list.scss"
+
 
 const List = () => {
     return (
-        <div>
-            this is list
+        <div className='listContainer'>
+            <DataTable/>
         </div>
     );
 };

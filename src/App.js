@@ -3,6 +3,7 @@ import {Route, createBrowserRouter, createRoutesFromElements, RouterProvider } f
 import List from "./pages/list/List";
 import New from "./pages/new/New";
 import Layout from "./components/layout/Layout";
+import UserDetails from "./pages/userDetails/UserDetails";
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="list" element={<List />} />
           <Route path="new" element={<New />} />
+          <Route path="user/:userId" element={<UserDetails />} />
         </Route>
     )
   );
