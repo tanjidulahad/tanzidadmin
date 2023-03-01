@@ -7,10 +7,10 @@ import "./layout.scss"
 const Layout = () => {
     return (
         <div className='mainContainter'>
-            <Sidebar />
+            <Sidebar className="sidebar"/>
             <div className='childContainer'>
             <Navbar/>
-            <Outlet />
+            <Outlet className="child"/>
             </div>
         </div>
 

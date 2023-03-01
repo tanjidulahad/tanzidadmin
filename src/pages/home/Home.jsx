@@ -7,9 +7,10 @@ import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlin
 import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
 import FeatureChart from '../../components/featurechart/FeatureChart';
 import Chart from '../../components/chart/Chart';
+import TableComponent from '../../components/Table/Table';
 const Home = () => {
     return (
-        <div >
+        <div className='homeContainer'>
             <div className="widgets">
                 <Widget data={{title:"USERS",isMoney:false,value:100,link:"See all users",icon:<PermIdentityIcon className='icon' style={{color:"crimson",backgroundColor:"rgba(255,0,0,0.2)"}}/>}}/>
                 <Widget data={{title:"ORDERS",isMoney:false,value:200,link:"View all orders",icon:<ShoppingCartOutlinedIcon className='icon' style={{color:"green",backgroundColor:"rgba(0,128,0,0.2)"}}/>}}/>
@@ -19,6 +20,10 @@ const Home = () => {
             <div className="charts">
                 <FeatureChart/>
                 <Chart/>
+            </div>
+            <div className="listContainer">
+                <div className="listTitle">Latest Transaction</div>
+                <TableComponent/>
             </div>
         </div>
     );
