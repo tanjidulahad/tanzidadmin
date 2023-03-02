@@ -1,0 +1,82 @@
+.userDetailsContainer{
+    max-height: 91vh;
+    overflow: auto;
+    &::-webkit-scrollbar{
+        width: 0;
+    }
+.top {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+
+    .left {
+        flex: 1;
+        padding: 10px;
+        box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.2);
+        position: relative;
+
+        .editButton {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: #6439ff;
+            background-color: #ece8ff;
+            padding: 5px;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 0 0 0 5px;
+        }
+
+
+        .item {
+            display: flex;
+            gap: 20px;
+
+            .itemImg {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                object-fit: cover;
+
+            }
+
+            .itemTitle {
+                margin: 0 0 10px 0;
+                color: #555;
+
+            }
+
+            .details {
+                margin-right: 20px;
+
+                .detailItem {
+                    margin-bottom: 10px;
+                    font-size: 14px;
+
+                    .itemKey {
+                        font-weight: bold;
+                        color: gray;
+                        margin-right: 5px;
+                    }
+
+                    .itemValue {
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        flex: 2;
+    }
+}
+.bottom{
+    padding: 20px;
+}
+.title {
+    color: rgba(128, 128, 128, 0.649);
+    font-size: 18px;
+}
+}

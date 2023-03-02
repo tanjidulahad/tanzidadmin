@@ -1,0 +1,133 @@
+.app.dark {
+    .sideBar {
+        background: #000;
+
+        .logo {
+            color: white;
+        }
+
+        .center {
+            ul {
+                .title {
+                    color: white;
+                }
+
+                li {
+                    span {
+                        color: white;
+                    }
+
+                    &:hover {
+                        span {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar {
+        background-color: #000;
+
+        .wrapper {
+            .search {
+                border: 0.5px solid white;
+
+                input {
+                    color: white;
+
+                    &::placeholder {
+                        color: white;
+                    }
+                }
+
+                .searchIcon {
+                    color: white;
+                }
+            }
+
+            .items {
+                .item {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .homeContainer {
+        background: #000;
+
+        .widget {
+            background: #000;
+            box-shadow: 2px 4px 10px 1px rgba(255, 255, 255, 255.2);
+            -webkit-box-shadow: 2px 4px 10px 1px rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: white;
+
+            .title {
+                color: white;
+            }
+        }
+
+        .charts {
+            .featurechart {
+                color: white;
+                background: #000;
+                box-shadow: 2px 4px 10px 1px rgba(255, 255, 255, 0.2);
+                -webkit-box-shadow: 2px 4px 10px 1px rgba(255, 255, 255, 0.2);
+
+                .top {
+                    color: white;
+
+                }
+
+                .bottom {
+                    .title {
+                        color: white;
+                    }
+
+                    .desc {
+                        color: white;
+                    }
+
+                    .summary {
+                        .item {
+                            .itemTitle {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .chart {
+                background: #000;
+                box-shadow: 2px 4px 10px 1px rgba(255, 255, 255, 0.2);
+                -webkit-box-shadow: 2px 4px 10px 1px rgba(255, 255, 255, 0.2);
+
+                .title {
+                    color: white;
+                }
+            }
+        }
+
+        .listContainer {
+            box-shadow: 2px 4px 10px 1px rgba(255, 255, 255, 0.2);
+            -webkit-box-shadow: 2px 4px 10px 1px rgba(255, 255, 255, 0.2);
+            .listTitle {
+                color: white;
+            }
+
+            .table {
+                background: #000;
+                box-shadow: 2px 4px 10px 1px rgba(255, 255, 255, 0.2);
+                -webkit-box-shadow: 2px 4px 10px 1px rgba(255, 255, 255, 0.2);
+
+                .tableCell {
+                    color: white;
+                }
+            }
+        }
+    }
+}

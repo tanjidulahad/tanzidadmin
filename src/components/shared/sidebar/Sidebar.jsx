@@ -13,7 +13,12 @@ import SettingsApplicationsSharpIcon from '@mui/icons-material/SettingsApplicati
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import { Link } from 'react-router-dom';
+import { useGoogleSignIn } from '../../../firebase/useFirebase';
+import { useDispatch } from 'react-redux';
+import { themeToggle } from '../../redux/theme/themeSlice';
 const Sidebar = () => {
+    const {logOut}=useGoogleSignIn()
+    const dispatch=useDispatch()
     return (
         <div className='sideBar'>
             <div className="top">
@@ -38,12 +43,12 @@ const Sidebar = () => {
                     <li><SettingsApplicationsSharpIcon className='icon'/><span>Settings</span></li>
                     <p className="title">USER</p>
                     <li><AccountCircleOutlinedIcon className='icon'/><span>Profile</span></li>
-                    <li><LogoutOutlinedIcon className='icon'/><span>Logout</span></li>
+                    <li onClick={logOut}><LogoutOutlinedIcon className='icon'/><span>Logout</span></li>
                 </ul>
             </div>
             <div className="bottom">
-                <div className="colorOption"></div>
-                <div className="colorOption"></div>
+                <div className="colorOption" onClick={()=>dispatch(themeToggle())}></div>
+                <div className="colorOption" onClick={()=>dispatch(themeToggle())}></div>
             </div>
         </div>
     );
