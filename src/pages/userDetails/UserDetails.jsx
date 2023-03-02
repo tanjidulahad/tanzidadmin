@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
 import Chart from '../../components/chart/Chart';
 import TableComponent from '../../components/Table/Table';
 import "./userDetails.scss"

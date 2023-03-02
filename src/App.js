@@ -1,11 +1,10 @@
 import Home from "./pages/home/Home";
-import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import List from "./pages/list/List";
 import New from "./pages/new/New";
 import Layout from "./components/layout/Layout";
 import UserDetails from "./pages/userDetails/UserDetails";
 import Login from "./pages/login/Login";
-import { useState } from "react";
 import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
 import "./style/global.scss"
 import { useSelector } from "react-redux";

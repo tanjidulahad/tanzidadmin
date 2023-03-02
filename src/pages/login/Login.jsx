@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from "react-router-dom";
-import { login } from '../../components/redux/user/userSlice';
 import { useGoogleSignIn } from '../../firebase/useFirebase';
 import "./login.scss"
 
 const Login = () => {
     const loggedIn = useSelector((state) => state.user.loggedIn)
-    const dispatch = useDispatch()
     const { googleLogin } = useGoogleSignIn()
     // const [user,setUser]=useState(true)
     const navigate = useNavigate();
@@ -23,7 +21,7 @@ const Login = () => {
                 navigate("/")
             }
         }
-    }, [loggedIn])
+    }, [loggedIn,state])
 
     const handleSubmit = (e) => {
         e.preventDefault()
