@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import {  useSelector } from 'react-redux';
 import { useLocation, useNavigate } from "react-router-dom";
 import { useGoogleSignIn } from '../../firebase/useFirebase';
 import "./login.scss"
@@ -21,7 +21,7 @@ const Login = () => {
                 navigate("/")
             }
         }
-    }, [loggedIn,location.state])
+    }, [loggedIn,location.state,navigate])
 
     const handleSubmit = (e) => {
         e.preventDefault()
