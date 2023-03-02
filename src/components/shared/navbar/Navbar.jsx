@@ -7,14 +7,19 @@ import FullscreenExitOutlinedIcon from '@mui/icons-material/FullscreenExitOutlin
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
-import avatar from "../../../assets/users/avatar.jpg"
+import { useDispatch, useSelector } from 'react-redux';
+import { themeToggle } from '../../redux/theme/themeSlice';
+import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
 const Navbar = () => {
+    const loggedInUser = useSelector((state) => state.user.user)
+    const darkMode=useSelector((state)=>state.theme.darkModeOn)
+    const dispatch=useDispatch()
     return (
         <div className='navbar'>
             <div className="wrapper">
                 <div className="search">
                     <input type="text" placeholder='search...'/>
-                    <SearchOutlinedIcon/>
+                    <SearchOutlinedIcon className='searchIcon'/>
                 </div>
                 <div className="items">
                     <div className="item">
@@ -22,7 +27,12 @@ const Navbar = () => {
                         English
                     </div>
                     <div className="item">
-                        <DarkModeOutlinedIcon className='icon'/>
+                    { darkMode?
+                        <WbSunnyOutlinedIcon className='icon' onClick={()=>dispatch(themeToggle())}/>
+                        :
+                        <DarkModeOutlinedIcon className='icon' onClick={()=>dispatch(themeToggle())}/>
+                    }
+                        
                     </div>
                     <div className="item">
                         <FullscreenExitOutlinedIcon className='icon'/>
@@ -39,7 +49,7 @@ const Navbar = () => {
                         <FormatListBulletedOutlinedIcon className='icon'/>
                     </div>
                     <div className="item">
-                        <img src={avatar} alt="avatar" className='avatar'/>
+                        <img src={loggedInUser.photoURL} alt="avatar" className='avatar'/>
                     </div>
                 </div>
             </div>

@@ -4,9 +4,9 @@ import { userColumns, userRows } from '../../assets/tableData/tableData';
 import "./dataTable.scss"
 import { Link } from 'react-router-dom';
 const DataTable = () => {
-    const handleView=()=>{
-        console.log("view clicked")
-    }
+    // const handleView=()=>{
+    //     console.log("view clicked")
+    // }
     const actionColumn = [{
         field: "action",
         headerName: "Action",
@@ -14,7 +14,7 @@ const DataTable = () => {
         renderCell: (params) => {
             return (
                 <div className="cellAction">
-                    <Link to={`/user/${params.row.id}`}><div className="viewButton" onClick={handleView}>View</div></Link>
+                    <Link to={`/user/${params.row.id}`}><div className="viewButton">View</div></Link>
                     <div className="deleteButton">Delete</div>
                 </div>
             )
