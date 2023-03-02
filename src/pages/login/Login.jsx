@@ -21,7 +21,7 @@ const Login = () => {
                 navigate("/")
             }
         }
-    }, [loggedIn,state])
+    }, [loggedIn,location.state])
 
     const handleSubmit = (e) => {
         e.preventDefault()
